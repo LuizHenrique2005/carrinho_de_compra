@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras com Aba Lateral</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <span class="logo">MAKARIOS</span>
+        <!-- Substituindo o botão por ícone -->
+        <button id="cart-button"><i class="fas fa-shopping-cart"></i></button>
+    </div>
+
+    <div class="side-cart" id="side-cart">
+        <h2>Carrinho de Compras</h2>
+        <div id="cart-items">
+            <!-- Os itens do carrinho serão inseridos aqui -->
+        </div>
+        <button id="close-cart">Fechar</button>
+    </div>
+
+    <div class="content">
+        <button class="add-to-cart" data-product="Produto 1">Adicionar Produto 1</button>
+        <button class="add-to-cart" data-product="Produto 2">Adicionar Produto 2</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

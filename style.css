@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #f5f5dc;
+    /* Bege claro */
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    /* Alinha o conteúdo à direita */
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    color: black;
+    /* A cor foi ajustada para o nome "MAKARIOS" */
+}
+
+#cart-button {
+    padding: 10px;
+    background-color: #007B55;
+    /* Verde escuro */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    /* Ajuste para o ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-cart {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+}
+
+.side-cart.open {
+    right: 0;
+}
+
+.side-cart h2 {
+    padding: 20px;
+    margin: 0;
+    background-color: #f5f5dc;
+    /* Bege claro */
+    color: black;
+}
+
+#cart-items {
+    padding: 20px;
+}
+
+#close-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5dc;
+    /* Vermelho para o botão de fechar */
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.add-to-cart {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5dc;
+    /* Bege claro */
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.remove-item {
+    background-color: transparent;
+    border: none;
+    color: #f44336;
+    /* Vermelho para o ícone de lixeira */
+    cursor: pointer;
+    font-size: 14px;
+    /* Ajuste do tamanho da fonte */
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    /* Torna o texto maiúsculo */
+}
+
+/* Estilo do ícone de lixeira */
+.remove-item::before {
+    content: "\1F5D1";
+    /* Código Unicode do ícone de lixeira */
+    font-size: 16px;
+    /* Ajuste do tamanho do ícone */
+    margin-right: 5px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.remove-item:hover {
+    color: #d32f2f;
+    /* Mudança de cor ao passar o mouse */
+}
+
+.remove-item:focus {
+    outline: none;
+}
+
+.quantity {
+    font-weight: bold;
+    color: #333;
+    margin-left: 5px;
+}
+
+/* Estilo dos itens do carrinho */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nome do produto */
+.cart-item .product-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Quantidade */
+.cart-item .quantity {
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+}
+
+/* Botão de excluir */
+.remove-item {
+    background-color: transparent;
+    border: none;
+    color: #f44336;
+    /* Vermelho para o ícone de lixeira */
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do ícone de lixeira */
+.remove-item::before {
+    content: "\1F5D1";
+    /* Código Unicode do ícone de lixeira */
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+/* Efeito de hover */
+.remove-item:hover {
+    color: #d32f2f;
+}
+
+/* Efeito de foco */
+.remove-item:focus {
+    outline: none;
+}
+
+#cart-button {
+    padding: 10px;
+    background-color: #f5f5dc;
+    /* Verde escuro */
+    color: rgb(15, 15, 15);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart-button i {
+    font-size: 24px;
+    /* Tamanho do ícone */
+}
