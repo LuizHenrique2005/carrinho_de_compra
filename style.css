@@ -1,53 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
 .navbar {
-    background-color: #f5f5dc;
-    /* Bege claro */
+    background-color: #f8f9fa;
     color: black;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
-    justify-content: flex-end;
-    /* Alinha o conteúdo à direita */
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
-    flex: 1;
-    color: black;
-    /* A cor foi ajustada para o nome "MAKARIOS" */
+    color: #007BFF;
 }
 
 #cart-button {
-    padding: 10px;
-    background-color: #007B55;
-    /* Verde escuro */
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
-    /* Ajuste para o ícone */
     display: flex;
     align-items: center;
-    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+#cart-button:hover {
+    background-color: #0056b3;
 }
 
 .side-cart {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -350px;
+    width: 350px;
     height: 100%;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     transition: right 0.3s ease;
+    z-index: 1000;
 }
 
 .side-cart.open {
@@ -57,9 +58,9 @@ body {
 .side-cart h2 {
     padding: 20px;
     margin: 0;
-    background-color: #f5f5dc;
-    /* Bege claro */
-    color: black;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
 }
 
 #cart-items {
@@ -69,143 +70,93 @@ body {
 #close-cart {
     display: block;
     width: 100%;
-    padding: 10px;
-    background-color: #f5f5dc;
-    /* Vermelho para o botão de fechar */
-    color: rgb(0, 0, 0);
+    padding: 15px;
+    background-color: #ff4d4f;
+    color: white;
     border: none;
     cursor: pointer;
     text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas nas partes inferiores */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+#close-cart:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px); /* Pequeno movimento ao passar o mouse */
+}
+
+
 
 .content {
     padding: 20px;
 }
 
 .add-to-cart {
-    display: block;
+    display: inline-block;
     margin: 10px 0;
-    padding: 10px;
-    background-color: #f5f5dc;
-    /* Bege claro */
-    color: black;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-.remove-item {
-    background-color: transparent;
-    border: none;
-    color: #f44336;
-    /* Vermelho para o ícone de lixeira */
-    cursor: pointer;
-    font-size: 14px;
-    /* Ajuste do tamanho da fonte */
-    padding: 0;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    /* Torna o texto maiúsculo */
-}
-
-/* Estilo do ícone de lixeira */
-.remove-item::before {
-    content: "\1F5D1";
-    /* Código Unicode do ícone de lixeira */
     font-size: 16px;
-    /* Ajuste do tamanho do ícone */
-    margin-right: 5px;
-    /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s ease;
 }
 
-.remove-item:hover {
-    color: #d32f2f;
-    /* Mudança de cor ao passar o mouse */
+.add-to-cart:hover {
+    background-color: #218838;
 }
 
-.remove-item:focus {
-    outline: none;
-}
-
-.quantity {
-    font-weight: bold;
-    color: #333;
-    margin-left: 5px;
-}
-
-/* Estilo dos itens do carrinho */
 .cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    padding: 10px;
+    padding: 15px;
     background-color: #f8f8f8;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-/* Nome do produto */
-.cart-item .product-name {
-    font-size: 14px;
+.cart-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-name {
+    font-size: 16px;
     font-weight: bold;
     color: #333;
 }
 
-/* Quantidade */
-.cart-item .quantity {
-    font-size: 12px;
-    color: #888;
+.quantity {
+    font-size: 14px;
+    color: #666;
     margin-left: 5px;
 }
 
-/* Botão de excluir */
 .remove-item {
     background-color: transparent;
     border: none;
-    color: #f44336;
-    /* Vermelho para o ícone de lixeira */
+    color: #ff4d4f;
     cursor: pointer;
-    font-size: 16px;
-    padding: 0;
-    margin-left: 10px;
+    font-size: 18px;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease;
 }
 
-/* Estilo do ícone de lixeira */
-.remove-item::before {
-    content: "\1F5D1";
-    /* Código Unicode do ícone de lixeira */
-    font-size: 16px;
-    margin-right: 5px;
-}
-
-/* Efeito de hover */
 .remove-item:hover {
     color: #d32f2f;
 }
 
-/* Efeito de foco */
-.remove-item:focus {
-    outline: none;
+.remove-item::before {
+    content: "\1F5D1";
+    font-size: 18px;
+    margin-right: 5px;
 }
 
-#cart-button {
-    padding: 10px;
-    background-color: #f5f5dc;
-    /* Verde escuro */
-    color: rgb(15, 15, 15);
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-#cart-button i {
-    font-size: 24px;
-    /* Tamanho do ícone */
-}
